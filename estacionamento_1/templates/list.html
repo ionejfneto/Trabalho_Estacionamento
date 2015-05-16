@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IJFN | Trabalho Desenv. Web II</title>
+<link rel="stylesheet" type="text/css" href="/static/css/css.css"/>
+</head>
+<body style="background:url(/static/img/bg.png)">
+    <div id="header">		
+        <h1 align="center">Sistema de Controle para Estacionamento em Python e Django V. 0.1</h1>
+    	<ul align="center">				
+			<li><a href="/" title="Ir a tela inicial">Home</a> </li>	|
+			<li><a href="/f{{contexto}}">Cadastrar</a> </li>											
+		</ul>	
+    </div>      
+    <div id="painel">		       
+		<div align="center">
+			<h3 class="msg">Listagem de {{contexto}}s</h3>			
+			{% for post in post %}		
+			<a href="/e{{contexto}}/{{post.id}}" title="Editar este {{contexto}}">
+			<div class="lista">
+			{{ post}} 
+			</div>
+			</a>
+			
+			{% endfor %}				
+		</div>	
+		<h3 class="msg"></h3>			
+		<br><br>
+    </div>
+    <div id="footer" align="center">		
+		<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
+    </div>
+</body>
+</html>
