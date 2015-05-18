@@ -5,16 +5,16 @@
 <title>IJFN | Trabalho Desenv. Web II</title>
 <link rel="stylesheet" type="text/css" href="/static/css/css.css"/>
 </head>
-<body style="background:url(/static/img/bg.png)">
-    <div id="header">		
-        <h1 align="center">Sistema de Controle para Estacionamento em Python e Django V. 1.0</h1>
-    	<ul align="center">				
+<body style="background:url(/static/img/bg.jpg);background-size:100%">
+    <div id="header" style="background:url(/static/img/a.png)no-repeat;background-size:100% 100%">		
+		<h1 align="center;" >Sistema de Controle para Estacionamento em Python e Django V. 1.0</h1>
+		<ul align="center">				
 		<li><a href="/" title="Ir a tela inicial">Home</a> </li>	
-		{% if contexto != None %}
-			{% if contexto != 'Vaga'%}
-		| <li><a href="/{{contexto}}s" title="Ir a listagem de {{contexto}}s ">{{contexto}}s</a> </li>
+			{% if contexto != None %}
+				{% if contexto != 'Vaga'%}
+			| <li><a href="/{{contexto}}s" title="Ir a listagem de {{contexto}}s ">{{contexto}}s</a> </li>
+				{% endif %}
 			{% endif %}
-		{% endif %}
 		</ul>			
     </div>      
     <div id="painel">		       	
@@ -25,30 +25,26 @@
 			<h3 class="msg">Cadastro de {{contexto}}s</h3>
 			{% endif %}
 			{{vaga}}
-				<form method="post">
-			{% csrf_token %}
-			{{form}}		
-						
-					
-					<input type="submit" value="Salvar" title="Salvar os dados do formulário ">
-				</form>	
+			<form method="post">
+				{% csrf_token %}
+				{{form}}								
+				<input type="submit" value="Salvar" title="Salvar os dados do formulário ">					
+				{% if contexto != None %}
+					{% if contexto == 'Vaga'  %}
+						<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="20" height="20" title="voltar"></a></h4>  			
+					{% elif contexto != 'Vaga' %}
+						<h4><a class="link" href="/{{contexto}}s"><img src="/static/img/voltar.png" width="20" height="20" title="voltar"></a></h4>  
+					{% endif %}
+				{% else %}
+					<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="20" height="20" title="voltar"></a></h4>  			
+				{% endif %}
+			</form>	
+		</div>		
+		<h3 class="msg"></h3>	
+		<div id="footer" align="center">		
+			<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
 		</div>
+    </div>
 
-		{% if contexto %}
-		{% if contexto == 'Vaga'  %}
-			<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="30" height="30" title="voltar"></a></h4>  			
-		{% elif contexto != 'Vaga' %}
-			<h4><a class="link" href="/{{contexto}}s"><img src="/static/img/voltar.png" width="30" height="30" title="voltar"></a></h4>  
-		{% elif contexto == '' %}
-			<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="30" height="30" title="voltar"></a></h4>
-		{% endif %}
-		{% endif%}
-		
-					
-		<br><br>
-    </div>
-    <div id="footer" align="center">		
-		<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
-    </div>
 </body>
 </html>

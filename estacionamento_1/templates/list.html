@@ -5,9 +5,9 @@
 <title>IJFN | Trabalho Desenv. Web II</title>
 <link rel="stylesheet" type="text/css" href="/static/css/css.css"/>
 </head>
-<body style="background:url(/static/img/bg.png)">
-    <div id="header">		
-        <h1 align="center">Sistema de Controle para Estacionamento em Python e Django V. 0.1</h1>
+<body style="background:url(/static/img/bg.jpg);background-size:100%">
+    <div id="header" style="background:url(/static/img/a.png)no-repeat;background-size:100% 100%">				
+		<h1 align="center">Sistema de Controle para Estacionamento em Python e Django V. 0.1</h1>
     	<ul align="center">				
 			<li><a href="/" title="Ir a tela inicial">Home</a> </li>	|
 			<li><a href="/f{{contexto}}">Cadastrar</a> </li>											
@@ -18,18 +18,17 @@
 			<h3 class="msg">Listagem de {{contexto}}s</h3>			
 			{% for post in post %}		
 			<a href="/e{{contexto}}/{{post.id}}" title="Editar este {{contexto}}">
-			<div class="lista">
-			{{ post}} 
-			</div>
-			</a>
-			
-			{% endfor %}				
+				<div class="lista">
+					{{ post}} 
+				</div>
+			</a>		
+			{% endfor %}
+			<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="20" height="20" title="voltar"></a></h4>
 		</div>	
 		<h3 class="msg"></h3>			
-		<br><br>
-    </div>
-    <div id="footer" align="center">		
-		<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
+	    <div id="footer" align="center">		
+			<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
+		</div>
     </div>
 </body>
 </html>

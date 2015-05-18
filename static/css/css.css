@@ -1,6 +1,6 @@
 h1,h2,h3,h4,h5,h6,p,a{text-align:center;}
 a{text-decoration:none;color:white}
-.vazia{width:55px;height:110px;background:green;margin:5px auto}
+.vazia{width:55px;height:110px;background:#55BA33;margin:5px auto}
 .ocupada{width:55px;height:110px;background:red;margin:5px auto}
 .msg{border:5px solid #666; border-radius:5px;background:#999;}
 html{color:white;text-shadow:2px 2px black;}
@@ -9,7 +9,7 @@ html{color:white;text-shadow:2px 2px black;}
 .vaga{width:58px;height:150px;float:left;background:#FDFDFD;margin:1%;border:1px solid #60C;}
 .nome{width:58px;height:30px;background:#999;text-align:center;font-size:28px}
 #painel{width:800px;margin:0 auto;}
-#footer{width:100%;border:3px solid #666;background:-moz-linear-gradient(top,#333  ,#FDFDFD, #333);background:-webkit-linear-gradient(top,#333  ,#FDFDFD, #333);background:linear-gradient(top,#333  ,#FDFDFD, #333);;float:left;border-radius:3px;border-radius:5px;}
+#footer{width:800px;border:3px solid #666;background:-moz-linear-gradient(top,#333  ,#FDFDFD, #333);background:-webkit-linear-gradient(top,#333  ,#FDFDFD, #333);background:linear-gradient(top,#333  ,#FDFDFD, #333);float:left;border-radius:3px;border-radius:5px;}
 .link{color:white;text-decoration:none}
 .lista{border:2px solid #333;background:white;margin-bottom:5px;color:black;text-shadow:none}
 li{list-style:none;display:inline;padding:10px}
