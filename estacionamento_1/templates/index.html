@@ -4,15 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>IJFN | Trabalho Desenv. Web II</title>
 <link rel="stylesheet" type="text/css" href="/static/css/css.css"/>
+<script type="text/javascript" src="/static/js/relogio.js"></script>
 </head>
-<body style="background:url(/static/img/bg.jpg);background-size:100%">
-	<div id="header" style="background:url(/static/img/a.png)no-repeat;background-size:100% 100%">		       	       
-    <h1>Sistema de Controle para Estacionamento em Python e Django V. 0.1</h1>            			
+<body onload="moveR()">
+	<input id="relogio" readonly type="text" name="relogio" size="10" title="Hora atual" style="margin:0 auto;border:none">
+	
+	<div id="header" title="IJFN | Trabalho Desenv. Web II"><br>	
+    <h1>Controle de Estacionamento v.2.1</h1>            			
 	<ul align="center">						
 			<li><a href="Clientes" title="Ir ao setor de clientes" >Clientes</a> </li>	|
 			<li><a href="Carros" title="Ir ao setor de carros" >Carros</a> </li>				
 		</ul>			
-    </div>      
+    </div>      	
     <div id="painel" >	
 		<div align="center" >        	
 			<h3 class="msg">Disposição atual das vagas</h3>
@@ -30,9 +33,9 @@
 			{% endfor %}
 			</div>												
 		</div>				
-		<h3 style="float:left;width:100%"class="msg"></h3>	
+		<h3 class="msg" style="float:left;width:100%"></h3>	
 		<div id="footer" align="center">		
-			<h4><a style="text-decoration:none;color:white;" href="/admin">IJFN | 2015</a></h4>        		     		
+			<h4><a href="/admin">IJFN | 2015</a></h4>        		     		
 		</div>	
      </div>		
 </body>
