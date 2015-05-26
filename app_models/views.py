@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render_to_response
 from django.shortcuts import render, redirect, get_object_or_404
 from forms import ClienteForm
@@ -27,8 +28,12 @@ def index(request):
 ###################################################################################
 CONTEXT_CLI = "Cliente"
 def Clientes(request):
-	result = Cliente.objects.all()	
-	return render_to_response('list.html',{'post': result, 'contexto':CONTEXT_CLI})
+	a =  request.GET.get('query')
+	if(a):
+		result = Cliente.objects.filter(nome__contains=a)		
+	else:
+		result = ''				
+	return render_to_response('list.html',{'post': result,'contexto':CONTEXT_CLI})
 	
 def fCliente(request):
     if request.method == 'POST':
@@ -55,8 +60,13 @@ def eCliente(request,id=None):
 ###################################################################################
 CONTEXT_CAR = "Carro"
 def Carros(request):
-	result = Carro.objects.all()	
-	return render_to_response('list.html',{'post': result, 'contexto':CONTEXT_CAR})
+	a =  request.GET.get('query')	
+	if(a):
+		result = Carro.objects.filter(nome__contains=a)
+		#cont = Cliente.objects.filter(nome__contains=a).count()
+	else:
+		result = ''				
+	return render_to_response('list.html',{'post': result,'contexto':CONTEXT_CAR})
 	
 def fCarro(request):
     if request.method == 'POST':
