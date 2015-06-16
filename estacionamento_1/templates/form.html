@@ -1,13 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html class="animated fadeIn" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>IJFN | Trabalho Desenv. Web II</title>
 <link rel="stylesheet" type="text/css" href="/static/css/css.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
 <script type="text/javascript" src="/static/js/relogio.js"></script>
 </head>
-<body onload="moveR()" style="max-width:150%">
-	<!--<input id="relogio" readonly type="text" name="relogio" size="10" title="Hora atual" style="margin:0 auto;border:none">-->
+<body onload="moveR()">
+	
+	<form name="relogio" class="relogio">
+		<input  readonly type="text" name="relogio" size="10" title="Hora atual" class="inputRelogio">	
+	</form>
+	
     <div id="header" title="IJFN | Trabalho Desenv. Web II"><br>		
 		<h1 align="center;" >Controle de Estacionamento v.2.2</h1>
 		<ul align="center">				
@@ -24,13 +29,13 @@
 			{% if contexto == None %}
 			<h3 class="msg">Edição de dados </h3>
 			{% else %}
-			<h3 class="msg" style="margin-bottom:11px">Cadastro de {{contexto}}s</h3>
+			<h3 class="msg" style="margin-bottom:11px;padding:10px">Cadastro de {{contexto}}s</h3>
 			{% endif %}
 			{{vaga}}
 			<form method="post">
 				{% csrf_token %}
 				{{form}}								
-				<input type="submit" value="Salvar" title="Salvar os dados do formulário ">					
+				<input type="submit" value="Salvar" title="Salvar os dados do formulário " >					
 				{% if contexto != None %}
 					{% if contexto == 'Vaga'  %}
 						<h4><a class="link" href="/"><img src="/static/img/voltar.png" width="20" height="20" title="voltar"></a></h4>  			
@@ -44,7 +49,7 @@
 		</div>		
 		<h3 class="msg"></h3>	
 		<div id="footer" align="center">		
-			<h4><a class="link" href="/admin">IJFN | 2015</a></h4>        		      		
+			<h4><a href="/admin">Todos direitos reservados <br>&copy IJFN | 2015</a></h4>     		      		
 		</div>
     </div>
 

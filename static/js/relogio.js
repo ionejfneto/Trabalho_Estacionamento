@@ -5,6 +5,6 @@ function moveR()
     m = ob.getMinutes()
     s = ob.getSeconds()
     cs = h + " : " + m + " : " + s
-    document.relogio.value = cs
+    document.relogio.relogio.value = cs
     setTimeout("moveR()",1000)
 }

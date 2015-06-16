@@ -1,16 +1,19 @@
 h1,h2,h3,h4,h5,h6,p,a{text-align:center;}
 a{text-decoration:none;color:white;}
+html{width:100%;height:100%}
 body{background:url(/static/img/bg.jpg) no-repeat;background-size: 100%}
-.vazia{width:55px;height:110px;background:#55BA33;margin:5px auto}
-.ocupada{width:55px;height:110px;background:red;margin:5px auto}
-.msg{border:2px solid #666; border-radius:5px;background:#19305f}
+.relogio{border:none;width:180px;margin:-7px auto;height:auto;background:transparent;padding:0}
+.inputRelogio{margin:0 auto;border:none;font-weight:bold;height:auto;background:transparent;padding:0}
+.vazia{width:55px;height:90px;background:#55BA33;margin:5px auto}
+.ocupada{width:55px;height:90px;background:red;margin:5px auto}
+.msg{border:2px solid #666; border-radius:5px;background:#19305f;}
 html{color:white;text-shadow:2px 2px black;}
 #header{width:100%;border-right:3px solid #666;border-bottom:3px solid #666;border-left:3px solid #666;border-radius:5px;background:url(/static/img/a.png)no-repeat;background-size:100% 100%}
 #estacionamento{width:800px;float:left;margin:0 3%}
-.vaga{width:58px;height:150px;float:left;background:#FDFDFD;margin:1%;border:1px solid #60C;}
+.vaga{width:58px;height:130px;float:left;background:#FDFDFD;margin:1%;border:1px solid #60C;}
 .nome{width:58px;height:30px;background:#999;text-align:center;font-size:28px}
 #painel{width:800px;margin:0 auto;}
-#footer{width:800px;border:3px solid #666;;float:left;border-radius:3px;border-radius:5px;background:#19305f}
+#footer{width:800px;border:3px solid #666;float:left;border-radius:3px;border-radius:5px;background:#19305f}
 .link{color:white;text-decoration:none}
 .lista{border:2px solid #333;background:white;margin-bottom:5px;color:black;text-shadow:none}
 li{list-style:none;display:inline;padding:10px}
@@ -18,7 +21,7 @@ li:hover{background:#333;cursor:pointer}
 ul{margin-left:-40px}
 
 /*formulario*/
-form{border:2px solid #999;padding:10px;background:white;margin-top:-10px;color:black;text-shadow:none;font-weight:bold}
+form{border:2px solid #999;padding-top:10px;background:white;margin-top:-10px;color:black;text-shadow:none;font-weight:bold}
 label{display:block}
 input{width:40%;display:block;height:20px}
 select{width:40%;}

@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render_to_response
 from django.shortcuts import render, redirect, get_object_or_404
 from forms import ClienteForm
@@ -87,7 +86,11 @@ def eCarro(request,id=None):
 			return redirect('Carros')
 	else:	
 		form = CarroForm(instance=obj) 
-	return render(request,"form.html",{'form':form})
+		contexto = {
+		'titulo':CONTEXT_CAR,
+		'acao':'edit',
+		}
+	return render(request,"form.html",{'form':form,'contexto':CONTEXT_CAR})
 ###################################################################################	
 ###################################  Vaga  ########################################
 ###################################################################################
